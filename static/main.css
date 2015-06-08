@@ -1,0 +1,13 @@
+body {
+  padding-top: 50px;
+}
+
+.status {
+  margin-top: 10px;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#current-status {
+	margin-top: 40px;
+}
