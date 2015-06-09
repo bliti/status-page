@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+ 
 
     <title>API Status Page</title>
 
@@ -29,18 +29,27 @@
   </head>
 
   <body>
+	  
+	  <header>
+		  <div class="container header">
+		  	<h1>Your company name</h1>
+		  </div>
+	  
+	  </header><!-- /.header -->
 
 
-<div class="container">
-      <div class="status">
-        <button id="status-btn" class="btn btn-primary">Ping</button>
+	 <section id="status"> 
+     	<div class="container">
+			<h2>System status:</h2>
+			<h3 class="current-status"></h3>
+    	</div>
+	<section>
 		
-		<p id="current-status"></p>
-      </div>
-
-    </div><!-- /.container -->
-
-
+	<section id="contact">
+		<div class="container">
+			<a href="mailto:email@example.com" class="btn btn-lg btn-default">Contact Support</a>
+		</div>
+	</section>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

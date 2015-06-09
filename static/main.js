@@ -2,30 +2,36 @@
 
 $(document).ready(function() {
 	
-	$('#status-btn').click(function(){
-		console.log('click');
+	//change these two vars to whatever
+	//message you might need to.
+	var online = 'System is online as of:' ;
+	var offline = "System is offline as of: ";
+	
+	//timestamp for request
+	var stamp = new Date();
+
 	var url = 'http://localhost:3000'
     var ping = $.get(url, function(response){
 		console.log(response);
     })
 	.done(function(response){
 		
-		stamp = new Date(response.when);
-		
-		$('#current-status').removeClass('text-danger');
-		$('#current-status').addClass('text-success');
-		$('#current-status').text("Pong received on: "+stamp);
+		$('link[rel="shortcut icon"]').remove();
+		$('head').append('<link id="favicon" rel="shortcut icon" href="static/green/favicon.ico">');
+		$('.current-status').removeClass('bg-danger');
+		$('.current-status').addClass('bg-success');
+		$('.current-status').text(online+stamp);
 	})
 	.fail(function(response){
-		$('#current-status').removeClass('text-success');
-		$('#current-status').addClass('text-danger');
-		$('#current-status').text("Pong not received");
+		
+		$('head').append('<link id="favicon" rel="shortcut icon" href="static/red/favicon.ico">');
+		$('.current-status').removeClass('bg-success');
+		$('.current-status').addClass('bg-danger');
+		$('.current-status').text(offline+stamp);
 	})
 	.always(function(response){
 		console.log(response);
 	})
-	
-	});
 });
 
 
