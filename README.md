@@ -44,9 +44,11 @@ Yes! Its quite ugly. The basic layout is there. Just add whatever you need, chan
 
 Status online:
 
-http://i.imgur.com/Z8SQ0WY.png
-
+![Status online](http://i.imgur.com/Z8SQ0WY.png)
 
 Status offline
 
-http://i.imgur.com/J53ottm.png
+![Status offline](http://i.imgur.com/J53ottm.png)
+
+
+#### Thanks for visiting!
