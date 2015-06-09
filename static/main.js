@@ -15,8 +15,8 @@ $(document).ready(function() {
     
 	var ping = $.get(url, function(response){
 		console.log(response);
-    })
-	.done(function(response){
+	})
+    .done(function(response){
 		
 		$('link[rel="shortcut icon"]').remove();
 		$('head').append('<link id="favicon" rel="shortcut icon" href="static/green/favicon.ico">');
@@ -35,5 +35,3 @@ $(document).ready(function() {
 		console.log(response);
 	})
 });
-
-
