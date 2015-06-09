@@ -7,11 +7,13 @@ $(document).ready(function() {
 	var online = 'System is online as of:' ;
 	var offline = "System is offline as of: ";
 	
-	//timestamp for request
+	//timestamp for status message. It helps. :)
 	var stamp = new Date();
 
-	var url = 'http://localhost:3000'
-    var ping = $.get(url, function(response){
+	//change the URL to your needs
+	var url = 'http://localhost:3000';
+    
+	var ping = $.get(url, function(response){
 		console.log(response);
     })
 	.done(function(response){
